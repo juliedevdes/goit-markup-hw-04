@@ -148,8 +148,10 @@
                 flex-direction: column;
                 padding-bottom: 200px;
                 padding-top: 200px;
+                background-image: linear-gradient( rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/big_bg.jpg");
             }
             /*        
+            
             .hero (висел на див вместе с контейнером) {
                 display: flex;
                 justify-content: center;
