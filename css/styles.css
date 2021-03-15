@@ -111,26 +111,16 @@ body {
     padding-right: 15px;
 }
 
-.nav-icon {
-    margin-right: 10px;
-    fill: var(--second-color);
-    padding-bottom: 32px;
-    padding-top: 32px;
-    box-sizing: content-box;
-}
-
-.nav-icon:hover,
-.nav-icon:focus {
-    fill: var(--acent-color);
-    cursor: pointer;
-}
-
 .logo-dark {
     color: var(--black-logo);
 }
 
 .contacts {
     margin-left: auto;
+}
+
+.text-nav {
+    margin-left: 10px;
 }
 
 .nav {
@@ -148,6 +138,7 @@ body {
 .upper-contacts:hover,
 .upper-contacts:focus {
     color: var(--acent-color);
+    fill: var(--acent-color);
 }
 
 .upper-contacts {
@@ -156,9 +147,11 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--second-color);
+    fill: var(--icon-color);
     padding-top: 32px;
     padding-bottom: 32px;
-    display: block;
+    display: flex;
+    align-items: center;
 }
 
 .current {
@@ -237,13 +230,15 @@ body {
 
 /* --- features --- */
 
-.features-icon {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-right: 100px;
-    padding-left: 100px;
-    box-sizing: content-box;
+.features-icon {}
+
+.feature-icon-wrap {
     background-color: #F5F4FA;
+    width: 270px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 4px;
     margin-bottom: 30px;
 }
@@ -315,21 +310,27 @@ body {
 .socials-list {
     display: flex;
     align-items: center;
-    padding-left: 32px;
+    justify-content: space-between;
+    /* padding-left: 32px;
     padding-right: 32px;
-    padding-bottom: 30px;
+    padding-bottom: 30px; */
+}
+
+.socials-icon-item {
+    fill: var(--icon-color);
+}
+
+.socials-icon-wrap:not(:last-child) {
+    margin-right: 10px;
 }
 
 .socials-icon-item {
     display: flex;
     align-items: center;
-    padding: 12px;
+    justify-content: center;
     border-radius: 50%;
-    fill: var(--icon-color);
-}
-
-.socials-icon-item:not(:last-child) {
-    margin-right: 10px;
+    width: 44px;
+    height: 44px;
 }
 
 .socials-icon-item:hover,
@@ -372,7 +373,7 @@ body {
 }
 
 .team-capture {
-    padding-bottom: 16px;
+    padding-bottom: 30px;
     padding-top: 30px;
     padding-right: 32px;
     padding-left: 32px;
@@ -384,6 +385,7 @@ body {
     letter-spacing: 0.03em;
     color: var(--second-color);
     text-align: center;
+    margin-bottom: 16px;
 }
 
 
@@ -394,7 +396,8 @@ body {
     padding-top: 95px;
 }
 
-.clients-list-item {
+
+/* .clients-list-item {
     width: 170px;
     height: 90px;
     border: 1px solid #AFB1B8;
@@ -402,16 +405,29 @@ body {
     align-items: center;
     justify-content: center;
     display: flex;
-}
+    fill: var(--icon-color);
+} */
 
 .clients-list-item:not(:last-child) {
     margin-right: 30px;
 }
 
-.clients-list-item:focus,
-.clients-list-item:hover {
+.clients-list-link:focus,
+.clients-list-link:hover {
     border: 1px solid var(--acent-color);
     cursor: pointer;
+    fill: var(--acent-color);
+}
+
+.clients-list-link {
+    width: 170px;
+    height: 90px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    fill: var(--icon-color);
 }
 
 .clients-list {
@@ -419,28 +435,8 @@ body {
     align-items: center;
 }
 
-.client-icon {
-    fill: var(--icon-color);
-    box-sizing: content-box;
-    padding-top: 19px;
-    padding-bottom: 19px;
-    padding-left: 60px;
-    padding-right: 60px;
-}
-
-.special-client {
-    fill: var(--icon-color);
-    box-sizing: content-box;
-    padding-top: 19px;
-    padding-bottom: 19px;
-    padding-left: 40px;
-    padding-right: 40px;
-}
-
 .client-icon:hover,
-.client-icon:focus,
-.special-client:focus,
-.special-client:hover {
+.client-icon:focus {
     fill: var(--acent-color);
     cursor: pointer;
 }
@@ -500,7 +496,7 @@ body {
 .call-action {
     color: var(--white-font);
     text-transform: uppercase;
-    font-weight: 700px;
+    font-weight: 700;
     font-size: 14px;
     letter-spacing: 0.03em;
     line-height: 1.14;
@@ -514,18 +510,21 @@ body {
 
 .footer-position {
     display: flex;
+    align-items: baseline;
 }
 
 .socials-icon-item-footer {
     fill: var(--white-font);
     display: flex;
     align-items: center;
-    padding: 12px;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.socials-icon-item-footer:not(:last-child) {
+.socials-footer-item:not(:last-child) {
     margin-right: 10px;
 }
 
@@ -594,6 +593,7 @@ body {
 .por-card {
     margin-left: 30px;
     margin-top: 30px;
+    display: block;
 }
 
 .por-card:hover,
